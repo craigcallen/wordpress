@@ -1,0 +1,5 @@
+<?
+add_action( 'init', 'remove_custom_login_url' );
+function remove_custom_login_url() {
+    update_option( 'sg_security_login_type', 'default' );
+}
