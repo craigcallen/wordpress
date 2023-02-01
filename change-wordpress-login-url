@@ -1,0 +1,9 @@
+/*
+ * Change WP Login file URL using "login_url" filter hook
+ * https://developer.wordpress.org/reference/hooks/login_url/
+ */
+add_filter( 'login_url', 'custom_login_url', PHP_INT_MAX );
+function custom_login_url( $login_url ) {
+	$login_url = site_url( 'wp-new-signin.php', 'login' );	
+    return $login_url;
+}
